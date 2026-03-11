@@ -26,3 +26,12 @@
 
 ![QGIS-Export-SaveAs-GeoTIFF](./assets/QGIS-Export-SaveAs-GeoTIFF.png)
 
+## Converting raster to topo mesh
+
+| Format | Native Quads/n-gons | ASCII Size | Binary Size                     | Best Use                                         |
+| ------ | ------------------- | ---------- | ------------------------------- | ------------------------------------------------ |
+| PLY    | ✅ Yes             | Large      | Smallest (~0.7MB for 20k faces) | Scientific data, vertex colors china-sheetmetal​ |
+| OBJ    | ✅ Yes             | Largest    | N/A (rarely binary)             | Rendering w/ textures china-sheetmetal​          |
+| STL    | ❌ Triangles only  | Medium     | Small (~1MB for 20k faces)      | 3D printing only china-sheetmetal​               |
+
+
