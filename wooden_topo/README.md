@@ -18,6 +18,27 @@
 .\pmtiles.exe extract --bbox=5.615151,50.750133,6.113109,50.988467 https://download.mapterhorn.com/6-33-21.pmtiles 6-33-21.pmtiles
 ```
 
+w = 8550 x 4 = 34200 + 171090 = 205290
+h = 5700 x 4 = 22800 + 306710 = 329510
+
+| idx | West | South | East | North | dx | dy | dx/dy |
+| - | ---- | ----- | ---- | ----- | -- | -- | ----- |
+| 0 | 171,090 | 306,710 | 205,970 | 333,450 | 34,880 | 26,740 | 1.30 |
+| 1 | 171,090 | 306,710 | 205,290 | 329,510 | 34,200 | 22,800 | 1.50 |
+
+`JSONToElefront`-compatible JSON of the DEM bbox in EPSG:7415
+```json
+{
+    "min_east": 171090,
+    "min_north": 306710,
+    "max_east": 205290,
+    "max_north": 329510,
+    "SourceModel": null,
+    "LayerFullPath": null
+}
+```
+
+
 ### Use QGIS to extract a GeoTIFF
 
 1. Add the Mapterhorn topo as XYZ Tiles
